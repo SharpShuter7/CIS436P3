@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3949AB"
+    android:background="#7A88D8"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -16,14 +16,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/main_fragment" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/spinnerFragment"
         android:name="com.nshute.cis436p3.ui.main.Spinner"
         android:layout_width="416dp"
         android:layout_height="142dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/spinner_fragment" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

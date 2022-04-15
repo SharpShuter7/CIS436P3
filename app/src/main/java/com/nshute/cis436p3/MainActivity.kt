@@ -10,6 +10,8 @@ import com.android.volley.toolbox.Volley
 import com.nshute.cis436p3.ui.main.MainFragment
 import com.nshute.cis436p3.ui.main.Spinner
 
+//headers[“x-api-key”] = "ABC123"
+//need for API Key
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.mainFragment, MainFragment.newInstance())
                 .commitNow()
+
             supportFragmentManager.beginTransaction()
                 .replace(R.id.spinnerFragment, Spinner.newInstance())
                 .commitNow()
