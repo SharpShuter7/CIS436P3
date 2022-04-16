@@ -5,139 +5,184 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3949AB"
+    android:orientation="vertical"
     tools:context=".ui.main.MainFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="413dp"
+        android:layout_height="445dp"
         android:background="#3949AB"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarTrackVertical="@color/white"
+        android:soundEffectsEnabled="false"
+        android:touchscreenBlocksFocus="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_conversion_absoluteHeight="491dp"
+        tools:layout_conversion_absoluteWidth="393dp">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/catPic"
-            android:layout_width="277dp"
-            android:layout_height="127dp"
-            android:layout_marginTop="180dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout"
-            app:srcCompat="@android:mipmap/sym_def_app_icon"
-            tools:src="@tools:sample/avatars" />
+            <ImageView
+                android:id="@+id/catPic"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                app:srcCompat="@android:mipmap/sym_def_app_icon"
+                tools:layout_conversion_absoluteHeight="177dp"
+                tools:layout_conversion_absoluteWidth="392dp"
+                tools:src="@tools:sample/backgrounds/scenic" />
 
-        <TextView
-            android:id="@+id/breedName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Name:"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catPic" />
+            <TableLayout
+                android:id="@+id/catInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="visible">
 
-        <TextView
-            android:id="@+id/temperament"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Temperament:"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameText" />
+                <TableRow
+                    android:id="@+id/nameRow"
+                    android:layout_width="352dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="5dp">
 
-        <TextView
-            android:id="@+id/nameText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="placeholder"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/breedName" />
+                    <TextView
+                        android:id="@+id/breedName"
+                        android:layout_width="140dp"
+                        android:layout_height="match_parent"
+                        android:text="Name:"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tempText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="placeholder"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/temperament" />
+                    <TextView
+                        android:id="@+id/nameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="placeholder"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/orgin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Orgin:"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tempText" />
+                </TableRow>
 
-        <TextView
-            android:id="@+id/orginText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="placeholder"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/orgin" />
+                <TableRow
+                    android:id="@+id/descriptionRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:orientation="vertical"
+                    android:paddingEnd="5dp"
+                    android:scrollbarStyle="outsideInset">
 
-        <TextView
-            android:id="@+id/lifespan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Lifespan:"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/orginText" />
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="140dp"
+                        android:layout_height="match_parent"
+                        android:text="Description:"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lifespanText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="placeholder"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lifespan" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/descriptionText"
+                        android:layout_width="242dp"
+                        android:layout_height="match_parent"
+                        android:text="This is a description of what a description would look like.This is a description of what a description would look like.This is a description of what a description would look like."
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/orignRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        android:id="@+id/orgin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Orgin:"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/orginText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="placeholder"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/lifespanRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        android:id="@+id/lifespan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lifespan:"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lifespanText"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:text="placeholder"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/temperamentRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        android:id="@+id/temperament"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Temperament:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tempText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="placeholder"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
