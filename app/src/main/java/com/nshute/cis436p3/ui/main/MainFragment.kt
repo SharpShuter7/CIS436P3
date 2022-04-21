@@ -24,9 +24,9 @@ class MainFragment : Fragment() {
         super.onCreate(savedInstanceState)
         //spinner=(Spinner)findViewById(R.id.)
         //get_json()
+        //pass somethiing to fragment
     }
 
-    /*
     fun get_json(){
         val queue = Volley.newRequestQueue(context)
         val request = StringRequest(
@@ -36,17 +36,17 @@ class MainFragment : Fragment() {
                 var jArray = JSONArray(data)
                 for(i in 0..jArray.length()-1){
                     var jobject = jArray.getJSONObject(i)
-                    var userId = jobject.getInt("userId")
-                    var id = jobject.getInt("id")
-                    var title = jobject.getString("title")
-                    var body = jobject.getString("body")
+                    var name = jobject.getInt("name")
+                    var description = jobject.getInt("description")
+                    var origin = jobject.getString("origin")
+                    var lifespan = jobject.getString("lifespan")
+                    var temp = jobject.getString("temperament")
                 }
-                Log.e("Error", response.toString())
             },
             Response.ErrorListener {  })
         queue.add((request))
     }
-     */
+
 
     companion object {
         fun newInstance() = MainFragment()
@@ -64,7 +64,6 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }
