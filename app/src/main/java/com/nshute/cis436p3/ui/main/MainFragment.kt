@@ -1,5 +1,6 @@
 package com.nshute.cis436p3.ui.main
 
+import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -14,7 +15,7 @@ import com.android.volley.toolbox.Volley
 import com.nshute.cis436p3.R
 import org.json.JSONArray
 
-abstract class MainFragment : Fragment() {
+class MainFragment : Fragment() {
     val url = "https://api.thecatapi.com/v1/breeds" //for dropdown population
     //val search_url = "https://api.thecatapi.com/images/search?breed_id=${selected_breed.id}" //for dropdown population
 
@@ -22,11 +23,12 @@ abstract class MainFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //spinner=(Spinner)findViewById(R.id.)
-        get_json()
+        //get_json()
     }
 
+    /*
     fun get_json(){
-        val queue = Volley.newRequestQueue(this)
+        val queue = Volley.newRequestQueue(context)
         val request = StringRequest(
             Request.Method.GET, url,
             { response ->
@@ -44,10 +46,11 @@ abstract class MainFragment : Fragment() {
             Response.ErrorListener {  })
         queue.add((request))
     }
+     */
 
-    //companion object {
-        //fun newInstance() = MainFragment()
-    //}
+    companion object {
+        fun newInstance() = MainFragment()
+    }
 
     private lateinit var viewModel: MainViewModel
 
