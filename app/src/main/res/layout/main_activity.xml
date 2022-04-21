@@ -5,25 +5,32 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3949AB"
+    android:background="#7A88D8"
     tools:context=".MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/mainFragment"
-        android:name="com.nshute.cis436p3.ui.main.MainFragment"
-        android:layout_width="411dp"
-        android:layout_height="589dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="-282dp">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/spinnerFragment"
-        android:name="com.nshute.cis436p3.ui.main.Spinner"
-        android:layout_width="416dp"
-        android:layout_height="142dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/spinnerFragment"
+            android:name="com.nshute.cis436p3.ui.main.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:layout_marginTop="8dp"
+            tools:layout="@layout/spinner_fragment" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mainFragment"
+            android:name="com.nshute.cis436p3.ui.main.MainFragment"
+            android:layout_width="411dp"
+            android:layout_height="589dp"
+            android:layout_marginBottom="4dp"
+            tools:layout="@layout/main_fragment" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

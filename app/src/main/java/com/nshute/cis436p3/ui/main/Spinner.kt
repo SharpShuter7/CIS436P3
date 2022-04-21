@@ -26,7 +26,7 @@ class Spinner : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(SpinnerViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
 
 }
