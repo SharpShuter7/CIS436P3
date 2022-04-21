@@ -33,15 +33,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/catPic"
-                android:layout_width="match_parent"
-                android:layout_height="185dp"
-                app:srcCompat="@android:mipmap/sym_def_app_icon"
-                tools:layout_conversion_absoluteHeight="177dp"
-                tools:layout_conversion_absoluteWidth="392dp"
-                tools:src="@tools:sample/backgrounds/scenic" />
-
             <TableLayout
                 android:id="@+id/catInfo"
                 android:layout_width="match_parent"
@@ -184,5 +175,18 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/catPic"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:mipmap/sym_def_app_icon"
+        tools:layout_conversion_absoluteHeight="177dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:src="@tools:sample/backgrounds/scenic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
